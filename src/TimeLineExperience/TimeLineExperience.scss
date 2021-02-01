@@ -1,0 +1,29 @@
+$darkPink : #CEB1BE;
+$ligthPink: #F1E4E8;
+.TimeLineExperience {
+    
+    & .par {
+        border-right: solid;
+    }
+
+    & .impar {
+        border-left: solid;
+    }
+
+    & .par,
+    .impar {
+        max-width: 700px;
+        border-top: 1px solid black;
+        border-image: linear-gradient(to right,$ligthPink 0%, $darkPink 100%);
+        border-image-slice: 1;
+        border-width: 3px;
+    }
+
+    & .paddingTexto {
+        padding: 10px 40px;
+    }
+
+    & .paddingIcon{
+        padding-right: 10px;
+    }
+}

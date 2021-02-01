@@ -1,0 +1,38 @@
+.ToolsExperience {
+    padding: 1rem;
+
+    & .row {
+        padding: 1rem;
+
+        & .toolContainer {
+            width: 5rem;
+            height: 5rem;
+            position: relative;
+
+            & .circle {
+                & .circular-chart {
+                    & .circle {
+                        fill: rgba(231, 231, 253, 0.493);
+                        stroke-width: 3;
+                        stroke-linecap: round;
+                        animation: progress 2s ease-out forwards;
+                    }
+
+                    @keyframes progress {
+                        0% {
+                            stroke-dasharray: 0 100;
+                        }
+                    }
+                }
+            }
+
+            & img {
+                position: absolute;
+                top: 50%;
+                right: 2%;
+                transform: translate(-50%, -50%);
+                width: 50%;
+            }
+        }
+    }
+}

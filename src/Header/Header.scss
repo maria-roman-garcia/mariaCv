@@ -1,0 +1,194 @@
+$darkBlue: #4D7298;
+$darkPink: #CEB1BE;
+
+.Header {
+
+    height: 50vh;
+    width: 100vw;
+    background: linear-gradient(-45deg, #CEB1BE,#77A6B6, #F1E4E8,#4D7298); 
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    position: relative;
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    & .backgroundToWhite {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: -webkit-fill-available;
+        width: -webkit-fill-available;
+        background: linear-gradient(to top, white, transparent);
+    }
+
+    & .box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        & .title {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0;
+
+            & .block {
+                width: 0%;
+                height: inherit;
+                background: $darkPink;
+                position: absolute;
+                animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+            }
+
+            & h1 {
+                color: #fff;
+                -webkit-animation: mainFadeIn 2s forwards;
+                -o-animation: mainFadeIn 2s forwards;
+                animation: mainFadeIn 2s forwards;
+                animation-delay: 1.6s;
+                opacity: 0;
+                display: flex;
+                align-items: baseline;
+                position: relative;
+
+                & span {
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    border-radius: 50%;
+                    background: $darkPink;
+                    -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
+                    animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
+                    animation-delay: 2s;
+                    position: absolute;
+                    bottom: 13px;
+                    right: -31px;
+                    padding: 0.7rem;
+                }
+            }
+        }
+
+        & .role {
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            margin-top: 16px;
+            padding: 0;
+
+            & .block {
+                width: 0%;
+                height: inherit;
+                background: $darkBlue;
+                position: absolute;
+                animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+                animation-delay: 2s;
+                display: flex;
+            }
+
+            & p {
+                animation: secFadeIn 2s forwards;
+                animation-delay: 3.2s;
+                opacity: 0;
+                font-weight: bold;
+                color: $darkBlue;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+            }
+        }
+    }
+}
+
+@keyframes mainBlock {
+    0% {
+        width: 0%;
+        left: 0;
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes secBlock {
+    0% {
+        width: 0%;
+        right: 0;
+    }
+
+    50% {
+        width: 100%;
+        right: 0;
+    }
+
+    100% {
+        width: 0;
+        right: 100%;
+    }
+}
+
+@keyframes mainFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        background: $darkPink;
+        opacity: 0;
+    }
+
+    50% {
+        background: $darkPink;
+        opacity: 1;
+        bottom: 45px;
+    }
+
+    65% {
+        bottom: 0px;
+    }
+
+    80% {
+        bottom: 20px
+    }
+
+    100% {
+        background: $darkPink;
+        bottom: 13px;
+    }
+}
+
+@keyframes secFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

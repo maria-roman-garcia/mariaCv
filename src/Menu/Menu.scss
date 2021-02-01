@@ -1,0 +1,36 @@
+$darkPink: #CEB1BE;
+
+.Menu {
+    width: -webkit-fill-available;
+
+    & .navbar-nav {
+        width: -webkit-fill-available;
+        justify-content: space-around;
+
+        & .menuSelected {
+            color: $darkPink;
+            font-weight: bold;
+            padding-bottom: 3px;
+        }
+
+        & .underline {
+            height: 8px;
+            background-color: $darkPink;
+            animation: underlineAnimation 1s;
+        }
+    }
+}
+
+@keyframes underlineAnimation {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 120%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

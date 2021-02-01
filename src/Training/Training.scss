@@ -1,0 +1,24 @@
+$darkPink: #CEB1BE;
+
+.Training {
+    width: -webkit-fill-available;
+
+    & .trainingContainer {
+        flex-wrap: nowrap;
+
+        & .date {
+            min-width: 80px;
+            text-align: end;
+        }
+
+        & .trainingBox {
+            border-left: 2px solid $darkPink;
+            margin: 10px;
+            padding: 10px;
+
+            & .mapIcon {
+                padding-right: 5px;
+            }
+        }
+    }
+}
