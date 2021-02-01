@@ -8,12 +8,12 @@ import TimeLineExperience from './TimeLineExperience/TimeLineExperience';
 import ToolsExperience from './ToolsExperience/ToolsExperience';
 import Training from './Training/Training';
 import Projects from './Projects/Projects';
-// Contexto
+// Context
 import { ContextProvider } from './Context/Context';
 
 const App = () => {
 
-  //Contexto
+  //Context
   const [contextInfo, setContextInfo] = useState({
     menuSelected: 1
   })
