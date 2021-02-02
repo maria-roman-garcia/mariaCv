@@ -23,7 +23,7 @@ const ProjectCard = ({ tecnologies, title, description, img, gitHubLink, project
                 <div className="col-12 col-sm-4 photo" style={{ backgroundImage: `url(${img})` }}></div>
                 <div className="col-12 col-sm-8 text">
                     <div className="row description">
-                        <p className="darkBlue bold">ProjectDescription</p>
+                        <p className="darkBlue bold">Project description:</p>
                     </div>
                     <div className="row">
                         <p>{description}</p>

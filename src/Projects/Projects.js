@@ -41,7 +41,7 @@ const Projects = () =>{
 
     const allProjects = [
         {
-            tecnologies: [iconReact, iconJavaScript, iconJava, iconPostgresql, iconNetbeans, iconBootstrap, iconGit, iconHtml, iconSass, iconGitHub],
+            tecnologies: [iconReact, iconJavaScript, iconJava, iconPostgresql, iconNetbeans, iconBootstrap, iconGit, iconHtml, iconSass],
             title: "Acqua Web",
             description: `Web developed at <span class="importantText">#Delonia Software SL.</span> for <span class="importantText">#Acqua Telecom</span>, a telecommunications operator that offers fiber and mobile services throughout Spain.`,
             img:Acqua,
