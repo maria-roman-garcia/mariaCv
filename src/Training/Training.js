@@ -8,7 +8,7 @@ const Training = () => {
     const trainingArray = [
         {
             title: "Scrum Master Certification",
-            date: "2020",
+            date: "2021",
             place: "EIGP"
         },
         {
