@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAt, faDesktop, faMapMarkerAlt, faBook, faFilm, faPlaneDeparture, faHiking, faPalette, faMobileAlt} from '@fortawesome/free-solid-svg-icons';
+import { faAt, faDesktop, faMapMarkerAlt, faBook, faFilm, faPlaneDeparture, faHiking, faPalette, faMobileAlt, faCopy} from '@fortawesome/free-solid-svg-icons';
 import { faCheckCircle} from '@fortawesome/free-regular-svg-icons';
 import { faLinkedin, faGithub, faPagelines} from '@fortawesome/free-brands-svg-icons';
 
@@ -18,6 +18,7 @@ const iconFilm = <FontAwesomeIcon icon={faFilm} color='white' size='1x' />
 const iconTravel = <FontAwesomeIcon icon={faPlaneDeparture} color='white' size='1x' />
 const iconArt = <FontAwesomeIcon icon={faPalette} color='white' size='1x' />
 const iconMobile = <FontAwesomeIcon icon={faMobileAlt} color='#4D7298' size='1x' />
+const iconCv = <FontAwesomeIcon icon={faCopy} color='#4D7298' size='1x' />
 
 export default {
     iconEmail,
@@ -32,7 +33,8 @@ export default {
     iconTravel,
     iconHiking,
     iconArt,
-    iconMobile
+    iconMobile,
+    iconCv
 }
 
 

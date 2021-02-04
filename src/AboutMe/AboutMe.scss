@@ -42,6 +42,11 @@
                 & .marginRight {
                     margin-right: 10px;
                 }
+
+                & a {
+                    display: flex;
+                    text-decoration: none;
+                }
             }
         }
     }

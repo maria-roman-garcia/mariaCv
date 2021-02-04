@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Fragment, useState } from 'react';
 import './AboutMe.scss';
 //Img
 import meImg from '../img/Me/mariaCarnet2020CirculoTransparente.png';
+import CV from '../img/CV/MariaRomanCv2021.pdf';
 //Icons
 import Icons from '../Icons/Icons';
+//Reactstrap
+import { Tooltip } from 'reactstrap';
 
 const AboutMe = () => {
 
@@ -11,6 +14,46 @@ const AboutMe = () => {
     function openInNewTab(url) {
         var win = window.open(url, '_blank');
         win.focus();
+    }
+
+    //Tooltips
+    const [tooltips, setToolTips] = useState([
+        {
+            icon: Icons.iconNature,
+            text: "Nature",
+            open: false
+        },
+        {
+            icon: Icons.iconHiking,
+            text: "Hiking",
+            open: false
+        },
+        {
+            icon: Icons.iconBook,
+            text: "Read",
+            open: false
+        },
+        {
+            icon: Icons.iconFilm,
+            text: "Films",
+            open: false
+        },
+        {
+            icon: Icons.iconTravel,
+            text: "Travel",
+            open: false
+        },
+        {
+            icon: Icons.iconArt,
+            text: "Art",
+            open: false
+        }
+    ])
+
+    const toggleTooltip=(index)=>{
+        const newTooltip = [...tooltips];
+        newTooltip[index].open = !newTooltip[index].open;
+        setToolTips(newTooltip);
     }
 
     return (
@@ -29,12 +72,14 @@ const AboutMe = () => {
                          to help them!</p>
                         <p className="sectionTitle">Interests</p>
                         <div className="row justifyAround padding">
-                        <div className="interestIcon">{Icons.iconNature}</div>
-                        <div className="interestIcon">{Icons.iconHiking}</div>
-                        <div className="interestIcon">{Icons.iconBook}</div>
-                        <div className="interestIcon">{Icons.iconFilm}</div>
-                        <div className="interestIcon">{Icons.iconTravel}</div>
-                        <div className="interestIcon">{Icons.iconArt}</div>
+                            {tooltips.map((t, index) =>
+                                <div key={index}>
+                                    <div className="interestIcon" href="#" id={t.text}>{t.icon}</div>
+                                    <Tooltip placement="top" isOpen={t.open} target={t.text} toggle={() => toggleTooltip(index)}>
+                                        {t.text}
+                                    </Tooltip>
+                                </div>
+                            )}
                         </div>
                         <div className="socialMedia">
                             <div className="row borderTable justifyCenter">
@@ -47,8 +92,14 @@ const AboutMe = () => {
                                 <div className="col-12 col-lg-6">
                                     <p><span className="marginRight">{Icons.iconMobile}</span>+34 628 331 390</p>
                                 </div>
-                                <div className="col-12 col-lg-6" style={{cursor: "pointer"}}>
+                                <div className="col-12 col-lg-6" style={{ cursor: "pointer" }}>
                                     <p onClick={() => openInNewTab("https://www.linkedin.com/in/mar%C3%ADarom%C3%A1ngarc%C3%ADa-4587a6184/")}><span className="marginRight">{Icons.iconLinkedin}</span>Linkedin</p>
+                                </div>
+                                <div className="col-12 col-lg-6" style={{ cursor: "pointer" }}>
+                                    <a href={CV} download>
+                                        <span className="marginRight">{Icons.iconCv}</span>
+                                        <p type="submit">Download CV</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
